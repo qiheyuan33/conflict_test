@@ -39,6 +39,20 @@ def test_decrease_score():
     assert player.score == 13
 
 
+# 添加一个观众class
+class Audience:
+    def __init__(self, name):
+        self.name = name
+
+    def cheer(self):
+        return f"{self.name} is cheering!"
+    
+# 观众cheer函数
+def test_audience_cheer():
+    audience = Audience("Charlie")
+    assert audience.cheer() == "Charlie is cheering!"
+
+
 
 
 
