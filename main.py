@@ -13,32 +13,30 @@ def subtract(a, b):
 def subtract(a, b):
     return a - b
 
-#编写一个字符串函数
-def multiply(a, b):
-    return a * b
+#编写一个play class
+class Player:
+    def __init__(self, name, score=0):
+        self.name = name
+        self.score = score
 
-#编写一个乘法函数
-def multiply(a, b):
-    return a * b
+    def increase_score(self, points):
+        self.score += points
 
-#编写一个字符串除法函数
-def divide(a, b):
-    if b == 0:
-        return "Error: Division by zero"
-    return a / b
-
-#编写一个除法函数
-def divide(a, b):
-    if b == 0:
-        return "Error! Division by zero."
-    return a / b
+    def decrease_score(self, points):
+        self.score -= points
 
 
-#测试加法函数
-def test_add():
-    assert add(2, 3) == 5
-    assert add(-1, 1) == 0
-    assert add(0, 0) == 0
+# player 加法函数
+def test_increase_score():
+    player = Player("Alice", 10)
+    player.increase_score(5)
+    assert player.score == 15
+
+#player 减法函数
+def test_decrease_score():
+    player = Player("Bob", 20)
+    player.decrease_score(7)
+    assert player.score == 13
 
 
 
